@@ -1,63 +1,134 @@
-*{margin: 0;
-padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-html {font-size: 10px;
-font-family: sans-serif;}
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+    background-color: teal;
+}
 
 .calculator {
-    margin: 0 auto;
-    position: relative;
-    height: 50vw;
-    width: 30vw;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    height: 35vw;
+    min-height: 350px;
+    width: 25vw;
+    min-width: 250px;
     border-radius: 5px;
-    border: 2px solid #ddd;
-    background: rgb(56, 56, 56);
+    border: 1px solid rgba(221, 221, 221, 0.3);
+    box-shadow: 5px 5px 15px black;
+    background: rgba(56, 56, 56, .7);
+    transform: translate(-50%);
 }
 
-form{height: 15%}
+form {
+    height: 25%;
+    margin: 2% 2%;
+}
+
 .display {
     display: block;
-    width: 90%;
-    height: 90%;
-    margin: 20px auto;
+    width: 100%;
+    height: 100%;
     color: white;
-    font-size: 4vw;
+    font-size: 3vw;
+    background: inherit;
     border: none;
-    background: rgb(56, 56, 56);
 }
+
 .buttons {
+    position: absolute;
+    left: 1%;
+    bottom: 0;
     display: grid;
-    margin: auto;
-    width: 90%;
-    height: 80%;
+    width: 98%;
+    height: 75%;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
+
 .button {
     color: white;
-    font-size: 4vw;
-    margin: 1px;
-    background: rgb(38, 38, 38);
+    font-size: 2.5vw;
+    margin: 2px;
+    background: rgb(38, 38, 38, .7);
+    border: 0;
+    box-shadow: 1px 1px 2px black;
 }
 
 .button:hover {
-    background: rgb(78, 78, 78);
+    background: rgb(78, 78, 78, .7);
+    cursor: pointer;
 }
-#C         {grid-area: 1/1/2/2}
-#divi {grid-area: 1/2/2/3}
-#multi {grid-area: 1/3/2/4}
-#sub{grid-area: 1/4/2/5}
-#seven {grid-area: 2/1/3/2}
-#eight {grid-area: 2/2/3/3}
-#nine {grid-area: 2/3/3/4}
-#four {grid-area: 3/1/4/2}
-#five {grid-area: 3/2/4/3}
-#six {grid-area: 3/3/4/4}
-#one {grid-area: 4/1/5/2}
-#two {grid-area: 4/2/5/3}
-#three {grid-area: 4/3/5/4}
-#zero {grid-area: 5/1/6/4}
-#equal {grid-area: 4/4/6/5}
-#add {grid-area: 2/4/4/5}
 
-.cyfra {background: rgb(9, 9, 9); }
+#clear {
+    grid-area: 1/1/2/2
+}
+
+#divi {
+    grid-area: 1/2/2/3
+}
+
+#multi {
+    grid-area: 1/3/2/4
+}
+
+#sub {
+    grid-area: 1/4/2/5
+}
+
+#seven {
+    grid-area: 2/1/3/2
+}
+
+#eight {
+    grid-area: 2/2/3/3
+}
+
+#nine {
+    grid-area: 2/3/3/4
+}
+
+#four {
+    grid-area: 3/1/4/2
+}
+
+#five {
+    grid-area: 3/2/4/3
+}
+
+#six {
+    grid-area: 3/3/4/4
+}
+
+#one {
+    grid-area: 4/1/5/2
+}
+
+#two {
+    grid-area: 4/2/5/3
+}
+
+#three {
+    grid-area: 4/3/5/4
+}
+
+#zero {
+    grid-area: 5/1/6/4
+}
+
+#equal {
+    grid-area: 4/4/6/5
+}
+
+#add {
+    grid-area: 2/4/4/5
+}
+
+.cyfra {
+    background: rgb(9, 9, 9);
+}
